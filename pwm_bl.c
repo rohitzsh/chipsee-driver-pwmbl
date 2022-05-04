@@ -655,7 +655,8 @@ static int pwm_backlight_remove(struct platform_device *pdev)
 	struct backlight_device *bl = platform_get_drvdata(pdev);
 	struct pwm_bl_data *pb = bl_get_data(bl);
 
-	backlight_device_unregister(bl);
+	// Todo: find definition of this function
+	// backlight_device_unregister(bl);
 	pwm_backlight_power_off(pb);
 
 	if (pb->exit)
